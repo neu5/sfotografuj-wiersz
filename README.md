@@ -1,0 +1,1 @@
+# sfotografuj-wiersz
