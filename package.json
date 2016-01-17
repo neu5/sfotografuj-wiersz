@@ -7,6 +7,8 @@
     "url": "git://github.com/neu5/sfotografuj-wiersz.git"
   },
   "devDependencies": {
+    "ejs": "2.3.4",
+    "express": "4.13.3",
     "http-server": "0.8.5"
   },
   "license": "MIT",
