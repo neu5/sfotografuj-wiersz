@@ -1,0 +1,20 @@
+.rules {
+  color: $gray-dark;
+
+  .list-roman {
+    list-style: upper-roman;
+
+    & > li {
+      margin-bottom: 20px;
+    }
+  }
+
+  .list-latin {
+    list-style: lower-latin;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 40px;
+  }
+}

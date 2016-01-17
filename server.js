@@ -18,6 +18,12 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/regulamin', function(req, res) {
+  res.render('layout', {
+    content: getPageContent('rules')
+  });
+});
+
 app.listen(8080);
 console.log('server is running on localhost:8080');
 

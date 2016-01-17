@@ -13,6 +13,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "node_modules/.bin/http-server"
+    "start": "node server.js"
   }
 }
