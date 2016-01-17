@@ -3,6 +3,7 @@
 var express = require('express');
 var ejs = require('ejs');
 var fs = require('fs');
+var path = require("path");
 
 var app = express();
 
@@ -10,10 +11,10 @@ var distPath = 'dist/';
 var pages = [
   {
     fileName: 'index.html',
-    pageName: 'homepage'
+    pageName: 'homepage.ejs'
   }, {
     fileName: 'regulamin.html',
-    pageName: 'rules'
+    pageName: 'rules.ejs'
   }
 ];
 
@@ -25,19 +26,19 @@ app.use('/', express.static('public'));
 // homepage
 app.get('/', function(req, res) {
   res.render('layout', {
-    content: getPageContent('pages/homepage')
+    content: getPageContent('pages/homepage.ejs')
   });
 });
 
 app.get('/regulamin', function(req, res) {
   res.render('layout', {
-    content: getPageContent('pages/rules')
+    content: getPageContent('pages/rules.ejs')
   });
 });
 
 app.get('/build', function(req, res) {
   pages.forEach(function (page) {
-    var fileName = distPath + page.fileName;
+    var fileName = path.join(distPath, page.fileName);
     var stream = fs.createWriteStream(fileName);
 
     stream.once('open', function(fd) {
@@ -53,9 +54,11 @@ app.listen(8080);
 console.log('server is running on localhost:8080');
 
 function getPageContent(fileName) {
-  return ejs.render(fs.readFileSync('views/' + fileName + '.ejs', 'utf-8'));
+  return ejs.render(fs.readFileSync(path.join('views/', fileName), 'utf-8'));
 }
 
 function buildHtml(pageName) {
-  return getPageContent('partials/head') + getPageContent('pages/' + pageName) + getPageContent('partials/footer');
+  return getPageContent('partials/head.ejs') +
+         getPageContent(path.join('pages/', pageName)) +
+         getPageContent('partials/footer.ejs');
 }
