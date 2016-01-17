@@ -2,12 +2,5 @@
 @import 'submenu';
 
 .nav {
-  left: 0;
   width: 100%;
-  /* @TODO: make map of zindexes */
-  z-index: 100;
-
-  .nav-wrapper {
-    margin: 0 $frame-margin;
-  }
 }
