@@ -76,7 +76,8 @@ ul {
 .button {
   border: 3px solid $white;
   border-radius: 3px;
-  box-shadow: inset 0px 4px 4px 0px rgba(13, 128, 125, 0.15), 0px 4px 4px 0px rgba(13, 128, 125, 0.15);
+  box-shadow: inset 0px 4px 4px 0px rgba(13, 128, 125, 0.15),
+                    0px 4px 4px 0px rgba(13, 128, 125, 0.15);
   color: $white;
   display: inline-table;
   font-size: 13px;
