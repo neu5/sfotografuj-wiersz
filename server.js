@@ -7,7 +7,7 @@ var path = require("path");
 
 var app = express();
 
-var distPath = 'dist/';
+var distPath = 'dist';
 var pages = [
   {
     fileName: 'index.html',
