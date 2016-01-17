@@ -1,0 +1,28 @@
+.nav-submenu-wrapper {
+  height: $nav-submenu-height;
+  position: fixed;
+  top: $nav-menu-height;
+
+  .nav-submenu {
+    background: rgba(0, 0, 0, 0.10);
+    height: $nav-submenu-height;
+    padding-left: 590px;
+
+    li {
+      display: inline-block;
+      height: $nav-submenu-height;
+
+      a {
+        color: $white;
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        height: $nav-submenu-height;
+        line-height: $nav-menu-height;
+        margin-right: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

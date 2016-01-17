@@ -1,0 +1,25 @@
+.organizers-contact-wrapper {
+  overflow: hidden;
+
+  .organizers {
+    display: inline-table;
+    float: left;
+    padding-right: 10%;
+    width: 40%;
+
+    .text {
+      color: $yellow;
+      line-height: 28px;
+    }
+  }
+  .contact {
+    display: inline-table;
+    float: left;
+    width: 50%;
+
+    .text {
+      color: $white;
+      line-height: 28px;
+    }
+  }
+}

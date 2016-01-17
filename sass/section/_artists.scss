@@ -1,0 +1,35 @@
+.artists {
+  .pictures-list {
+    li {
+      display: inline-block;
+      margin-right: 17px;
+
+      &.last-in-the-row {
+        margin-right: 0px;
+      }
+
+      a {
+        display: block;
+        height: 281px;
+        width: 213px;
+        position: relative;
+
+        .artist-info {
+          bottom: 30px;
+          left: 25px;
+          line-height: 20px;
+          position: absolute;
+          text-transform: uppercase;
+
+          &__name {
+            color: $white;
+          }
+
+          &__title {
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+}

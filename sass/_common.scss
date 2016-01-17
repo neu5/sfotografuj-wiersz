@@ -1,0 +1,98 @@
+html,
+body {
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.frame {
+  margin: 0 $frame-margin $frame-margin $frame-margin;
+  overflow: hidden;
+}
+
+.wrapper {
+  background: url('/img/bg.jpg') no-repeat $aquamarine;
+}
+
+.container {
+  margin: 0 auto;
+  width: $content-width;
+}
+
+.main {
+  margin-top: $nav-menu-height;
+  padding: $nav-submenu-height 0 40px 0;
+}
+
+.header {
+  color: $white;
+  font-size: 45px;
+  font-weight: 700;
+
+  .minor {
+    font-size: 32px;
+  }
+}
+
+.subheader {
+  color: $yellow;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 56px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:before {
+    background: url('/img/line.jpg') no-repeat;
+    content: "";
+    display: block;
+    height: 3px;
+    left: -$subheader-line-margin;
+    width: 46px;
+    position: absolute;
+    top: 6px;
+  }
+}
+
+.icon-svg {
+  width: 33px;
+  fill: $yellow;
+}
+
+.button {
+  border: 3px solid $white;
+  border-radius: 3px;
+  box-shadow: inset 0px 4px 4px 0px rgba(13, 128, 125, 0.15),
+                    0px 4px 4px 0px rgba(13, 128, 125, 0.15);
+  color: $white;
+  display: inline-table;
+  font-size: 13px;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @extend .clearfix;
+}
+
+.link {
+  color: $yellow;
+  text-decoration: underline;
+
+  &:hover {
+    color: $yellow-dark;
+  }
+}

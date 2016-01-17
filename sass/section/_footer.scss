@@ -1,0 +1,46 @@
+.footer {
+  overflow: hidden;
+
+  .container {
+    overflow: hidden;
+    padding: 40px 0 10px 0;
+  }
+
+  .footer-list-wrapper {
+    float: left;
+
+    .footer-list {
+      overflow: hidden;
+
+      li {
+        float: left;
+        margin-right: 40px;
+
+        a {
+          color: $gray-dark;
+          font-size: 13px;
+          font-weight: 700;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .copyright {
+      color: $gray-light;
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+  .social-links {
+    float: right;
+
+    a {
+      display: inline-block;
+    }
+  }
+}
