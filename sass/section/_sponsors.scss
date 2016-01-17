@@ -1,0 +1,15 @@
+.sponsors {
+  overflow: hidden;
+
+  .sponsors-list {
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

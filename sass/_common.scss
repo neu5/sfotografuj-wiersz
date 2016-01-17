@@ -35,7 +35,7 @@ ul {
 
 .main {
   margin-top: $nav-menu-height;
-  padding-top: $nav-submenu-height;
+  padding: $nav-submenu-height 0 40px 0;
 }
 
 .header {
@@ -68,6 +68,11 @@ ul {
   }
 }
 
+.icon-svg {
+  width: 33px;
+  fill: $yellow;
+}
+
 .button {
   border: 3px solid $white;
   border-radius: 3px;
@@ -80,4 +85,13 @@ ul {
   text-transform: uppercase;
 
   @extend .clearfix;
+}
+
+.link {
+  color: $yellow;
+  text-decoration: underline;
+
+  &:hover {
+    color: $yellow-dark;
+  }
 }
