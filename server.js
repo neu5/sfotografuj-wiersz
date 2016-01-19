@@ -11,13 +11,20 @@ var distPath = 'dist';
 var pages = [
   {
     fileName: 'index.html',
-    pageName: 'homepage.ejs'
+    pageName: 'homepage.ejs',
+    endpoint: '/'
   }, {
     fileName: 'regulamin.html',
-    pageName: 'rules.ejs'
+    pageName: 'rules.ejs',
+    endpoint: '/regulamin'
   }, {
     fileName: 'o-konkursie.html',
-    pageName: 'about.ejs'
+    pageName: 'about.ejs',
+    endpoint: '/o-konkursie'
+  }, {
+    fileName: 'zglos-sie.html',
+    pageName: 'apply.ejs',
+    endpoint: '/zglos-sie'
   }
 ];
 
@@ -26,22 +33,12 @@ app.set('view engine', 'ejs');
 
 app.use('/', express.static('public'));
 
-// homepage
-app.get('/', function(req, res) {
-  res.render('layout', {
-    content: getPageContent('pages/homepage.ejs')
-  });
-});
-
-app.get('/o-konkursie', function(req, res) {
-  res.render('layout', {
-    content: getPageContent('pages/about.ejs')
-  });
-});
-
-app.get('/regulamin', function(req, res) {
-  res.render('layout', {
-    content: getPageContent('pages/rules.ejs')
+// loop for default endpoints
+pages.forEach(function (page) {
+  app.get(page.endpoint, function(req, res) {
+    res.render('layout', {
+      content: getPageContent(path.join('pages', page.pageName))
+    });
   });
 });
 
@@ -63,11 +60,11 @@ app.listen(8080);
 console.log('server is running on localhost:8080');
 
 function getPageContent(fileName) {
-  return ejs.render(fs.readFileSync(path.join('views/', fileName), 'utf-8'));
+  return ejs.render(fs.readFileSync(path.join('views', fileName), 'utf-8'));
 }
 
 function buildHtml(pageName) {
   return getPageContent('partials/head.ejs') +
-         getPageContent(path.join('pages/', pageName)) +
+         getPageContent(path.join('pages', pageName)) +
          getPageContent('partials/footer.ejs');
 }
