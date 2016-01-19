@@ -15,6 +15,9 @@ var pages = [
   }, {
     fileName: 'regulamin.html',
     pageName: 'rules.ejs'
+  }, {
+    fileName: 'o-konkursie.html',
+    pageName: 'about.ejs'
   }
 ];
 
@@ -27,6 +30,12 @@ app.use('/', express.static('public'));
 app.get('/', function(req, res) {
   res.render('layout', {
     content: getPageContent('pages/homepage.ejs')
+  });
+});
+
+app.get('/o-konkursie', function(req, res) {
+  res.render('layout', {
+    content: getPageContent('pages/about.ejs')
   });
 });
 
