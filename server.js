@@ -5,7 +5,7 @@ var ejs = require('ejs');
 var fs = require('fs');
 var path = require('path');
 
-var Pages = require('./pages');
+var pages = require('./pages');
 
 var app = express();
 
@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use('/', express.static('public'));
 
 // loop for default uris
-Pages.pages.forEach(page => {
+pages.forEach(page => {
   app.get(page.uri, (req, res) => {
     res.render('layout', {
       content: getPageContent(path.join('pages', page.pageName))
