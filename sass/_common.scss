@@ -103,3 +103,32 @@ ul {
     color: $yellow-dark;
   }
 }
+
+.person-list {
+  margin-top: 35px;
+  overflow: hidden;
+
+  li {
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+
+  &__image-wrapper {
+    float: left;
+  }
+
+  &__description-wrapper {
+    float: left;
+    margin-left: 90px;
+  }
+
+  &__author-name {
+    color: $yellow;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: $white;
+  }
+}
