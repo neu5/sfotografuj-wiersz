@@ -12,19 +12,19 @@ var pages = [
   {
     fileName: 'index.html',
     pageName: 'homepage.ejs',
-    endpoint: '/'
+    uri: '/'
   }, {
     fileName: 'regulamin.html',
     pageName: 'rules.ejs',
-    endpoint: '/regulamin'
+    uri: '/regulamin'
   }, {
     fileName: 'o-konkursie.html',
     pageName: 'about.ejs',
-    endpoint: '/o-konkursie'
+    uri: '/o-konkursie'
   }, {
     fileName: 'zglos-sie.html',
     pageName: 'apply.ejs',
-    endpoint: '/zglos-sie'
+    uri: '/zglos-sie'
   }
 ];
 
@@ -33,9 +33,9 @@ app.set('view engine', 'ejs');
 
 app.use('/', express.static('public'));
 
-// loop for default endpoints
+// loop for default uris
 pages.forEach(function (page) {
-  app.get(page.endpoint, function(req, res) {
+  app.get(page.uri, function(req, res) {
     res.render('layout', {
       content: getPageContent(path.join('pages', page.pageName))
     });
