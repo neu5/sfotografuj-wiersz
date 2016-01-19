@@ -11,6 +11,14 @@ ul {
   padding: 0;
 }
 
+.list-upper-roman {
+  list-style: upper-roman;
+}
+
+.list-lower-latin {
+  list-style: lower-latin;
+}
+
 .clearfix {
   &:after {
     content: "";
