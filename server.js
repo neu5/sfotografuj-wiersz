@@ -34,20 +34,20 @@ app.set('view engine', 'ejs');
 app.use('/', express.static('public'));
 
 // loop for default uris
-pages.forEach(function (page) {
-  app.get(page.uri, function(req, res) {
+pages.forEach(page => {
+  app.get(page.uri, (req, res) => {
     res.render('layout', {
       content: getPageContent(path.join('pages', page.pageName))
     });
   });
 });
 
-app.get('/build', function(req, res) {
-  pages.forEach(function (page) {
+app.get('/build', (req, res) => {
+  pages.forEach(page => {
     var fileName = path.join(distPath, page.fileName);
     var stream = fs.createWriteStream(fileName);
 
-    stream.once('open', function(fd) {
+    stream.once('open', fd => {
       var html = buildHtml(page.pageName);
       stream.end(html);
     });

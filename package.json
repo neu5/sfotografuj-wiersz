@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git://github.com/neu5/sfotografuj-wiersz.git"
   },
+  "engines": {
+    "node": "5.4.1"
+  },
   "devDependencies": {
     "ejs": "2.3.4",
     "express": "4.13.3",
