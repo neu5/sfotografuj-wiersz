@@ -4,7 +4,7 @@
       display: inline-block;
       margin-right: 17px;
 
-      &.last-in-the-row {
+      &:last-of-type {
         margin-right: 0px;
       }
 

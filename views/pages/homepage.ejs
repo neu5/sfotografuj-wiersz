@@ -29,71 +29,18 @@
       fotografowie
     </h2>
     <ul class="pictures-list">
-      <li>
-        <a href="#">
-          <img src="/img/default_img.jpg">
-          <div class="artist-info">
-            <div class="artist-info__name">
-              Adam Kowalski
-            </div>
-            <div class="artist-info__title">
-              Pisarz/aktor
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="/img/default_img.jpg">
-          <div class="artist-info">
-            <div class="artist-info__name">
-              Adam Kowalski
-            </div>
-            <div class="artist-info__title">
-              Pisarz/aktor
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="/img/default_img.jpg">
-          <div class="artist-info">
-            <div class="artist-info__name">
-              Adam Kowalski
-            </div>
-            <div class="artist-info__title">
-              Pisarz/aktor
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="/img/default_img.jpg">
-          <div class="artist-info">
-            <div class="artist-info__name">
-              Adam Kowalski
-            </div>
-            <div class="artist-info__title">
-              Pisarz/aktor
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="last-in-the-row">
-        <a href="#">
-          <img src="/img/default_img.jpg">
-          <div class="artist-info">
-            <div class="artist-info__name">
-              Adam Kowalski
-            </div>
-            <div class="artist-info__title">
-              Pisarz/aktor
-            </div>
-          </div>
-        </a>
-      </li>
+      <% for(var i = 0; i < data.length; i++) { %>
+         <li>
+           <a href="#" data-list-type="photographers" data-list-index="<%= i %>">
+             <img src="<%= data[i].img %>">
+             <div class="artist-info">
+               <div class="artist-info__name">
+                 <%= data[i].name %>
+               </div>
+             </div>
+           </a>
+         </li>
+      <% } %>
     </ul>
     <h2 class="subheader">
       poeci
