@@ -1,3 +1,5 @@
+$max-sponsors-height: 75px;
+
 .sponsors {
   margin: 50px 0 50px 0;
   overflow: hidden;
@@ -8,9 +10,22 @@
 
     li {
       float: left;
+      margin-right: 25px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
 
       a {
         display: block;
+        height: $max-sponsors-height;
+        line-height: $max-sponsors-height;
+
+        img {
+          max-height: $max-sponsors-height;
+          max-width: 200px;
+          vertical-align: middle;
+        }
       }
     }
   }
