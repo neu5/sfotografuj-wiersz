@@ -1,3 +1,31 @@
-#modal {
+#overlay {
   // display: none;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#modal {
+  background-color: $white;
+  border: 15px solid $aquamarine;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  top: 30%;
+  width: $content-width;
+
+  .icon-cancel {
+    background: transparent;
+    border: none;
+    color: $yellow;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }

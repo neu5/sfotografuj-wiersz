@@ -27,8 +27,7 @@ app.use('/', express.static('public'));
 pages.forEach(page => {
   app.get(page.uri, (req, res) => {
     res.render('layout', {
-      content: getPageContent(path.join('pages', page.pageName), data[page.data]),
-      timestamp: null
+      content: getPageContent(path.join('pages', page.pageName), data[page.data])      
     });
   });
 });
