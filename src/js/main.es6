@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$().ready(() => {
   let modal = function Modal() {
     let $overlay = $('#overlay');
     let $modal = $('#modal');
