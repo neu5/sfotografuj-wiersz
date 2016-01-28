@@ -13,9 +13,12 @@ $(document).ready(function () {
       $overlay[0].style.display = 'none';
     }
 
-    function putData(elem = {name: '', path: '', img: ''}) {
+    function putData(elem = {name: ''}, callback = open) {
       clear();
       let profession = elem.hasOwnProperty('contest-photo') ? 'Fotograf' : 'Pisarz';
+      let contestPhoto = $('<img>', {
+        src: `${elem.path}${elem['contest-photo']}`
+      });
 
       $modalContent.append(`
         <div class="modal-content__artist-wrapper">
@@ -24,9 +27,12 @@ $(document).ready(function () {
           <h2>${profession}</h2>
         </div>
         <div class="modal-content__contest-content-wrapper">
-          <img  src="${elem.path}${elem['contest-photo']}">
         </div>
       `);
+      $modalContent.children('.modal-content__contest-content-wrapper').append(contestPhoto);
+
+      contestPhoto.load(callback);
+
     }
 
     function clear() {
@@ -34,8 +40,7 @@ $(document).ready(function () {
     }
 
     function show(elem) {
-      putData(elem);
-      open();
+      putData(elem, open);
     }
 
     return {
