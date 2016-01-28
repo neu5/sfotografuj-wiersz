@@ -16,6 +16,8 @@ $(document).ready(function () {
     function putData(elem = {name: '', path: '', img: '', 'contest-photo': ''}) {
       clear();
       $modalContent.append(`<img src="${elem.path}${elem.img}">`);
+      $modalContent.append(`${elem.name}`);
+      $modalContent.append(`<img src="${elem.path}${elem['contest-photo']}">`);
     }
 
     function clear() {
