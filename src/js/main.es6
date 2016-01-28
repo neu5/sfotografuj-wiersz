@@ -13,11 +13,20 @@ $(document).ready(function () {
       $overlay[0].style.display = 'none';
     }
 
-    function putData(elem = {name: '', path: '', img: '', 'contest-photo': ''}) {
+    function putData(elem = {name: '', path: '', img: ''}) {
       clear();
-      $modalContent.append(`<img src="${elem.path}${elem.img}">`);
-      $modalContent.append(`${elem.name}`);
-      $modalContent.append(`<img src="${elem.path}${elem['contest-photo']}">`);
+      let profession = elem.hasOwnProperty('contest-photo') ? 'Fotograf' : 'Pisarz';
+
+      $modalContent.append(`
+        <div class="modal-content__artist-wrapper">
+          <img src="${elem.path}${elem.img}">
+          <h1>${elem.name}</h1>
+          <h2>${profession}</h2>
+        </div>
+        <div class="modal-content__contest-content-wrapper">
+          <img  src="${elem.path}${elem['contest-photo']}">
+        </div>
+      `);
     }
 
     function clear() {
