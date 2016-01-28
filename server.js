@@ -9,7 +9,7 @@ var pages = require('./pages');
 
 // get app data
 var data = {
-  'photographers': require('./public/assets/photographers')
+  'homepage': require('./public/assets/homepage')
 };
 
 var timestamp = new Date().getTime();
@@ -27,7 +27,7 @@ app.use('/', express.static('public'));
 pages.forEach(page => {
   app.get(page.uri, (req, res) => {
     res.render('layout', {
-      content: getPageContent(path.join('pages', page.pageName), data[page.data])      
+      content: getPageContent(path.join('pages', page.pageName), data[page.data])
     });
   });
 });

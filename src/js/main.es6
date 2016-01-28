@@ -15,10 +15,7 @@ $(document).ready(function () {
 
     function putData(elem = {name: ''}, callback = open) {
       clear();
-      let profession = elem.hasOwnProperty('contest-photo') ? 'Fotograf' : 'Pisarz';
-      let contestPhoto = $('<img>', {
-        src: `${elem.path}${elem['contest-photo']}`
-      });
+      let profession = elem['contest-photo'] ? 'Fotograf' : 'Pisarz';
 
       $modalContent.append(`
         <div class="modal-content__artist-wrapper">
@@ -29,10 +26,17 @@ $(document).ready(function () {
         <div class="modal-content__contest-content-wrapper">
         </div>
       `);
-      $modalContent.children('.modal-content__contest-content-wrapper').append(contestPhoto);
 
-      contestPhoto.load(callback);
-
+      if (profession === 'Fotograf') {
+        let contestPhoto = $('<img>', {
+          src: `${elem.path}${elem['contest-photo']}`
+        });
+        $modalContent.children('.modal-content__contest-content-wrapper').append(contestPhoto);
+        contestPhoto.load(callback);
+      } else {
+        $modalContent.children('.modal-content__contest-content-wrapper').append(elem['contest-poem']);
+        callback();
+      }
     }
 
     function clear() {
@@ -58,16 +62,9 @@ $(document).ready(function () {
     }
   });
 
-  let listData = {
-    photographers: {
-      path: '/assets/photographers.json',
-      data: null
-    },
-    poets: {
-      path: '/assets/poets.json',
-      data: null
-    }
-  };
+  const PATH = '/assets/homepage.json';
+
+  let listData = null;
 
   $('.pictures-list a').on('click', function(ev) {
     ev.preventDefault();
@@ -76,18 +73,20 @@ $(document).ready(function () {
     let listType = $this.data('list-type');
     let listIndex = $this.data('list-index');
 
-    let currentList = listData[listType];
-
-    if (currentList.data === null) {
-      getJson(currentList).complete(() => {
-        modal.show(currentList.data[listIndex]);
-      });
-    } else {
-      modal.show(currentList.data[listIndex]);
-    }
+    getJson(listType).done(data => {
+      modal.show(data[listType][listIndex]);
+    });
   });
 
-  function getJson(dataObj) {
-    return $.getJSON(dataObj.path, returnedData => dataObj.data = returnedData);
+  function getJson() {
+    let deferred = $.Deferred();
+
+    if (listData === null) {
+      return $.getJSON(PATH, data => listData = data);
+    } else {
+      deferred.resolve(listData);
+    }
+
+    return deferred.promise();
   }
 });

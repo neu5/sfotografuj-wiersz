@@ -3,7 +3,7 @@ module.exports = [
     fileName: 'index.html',
     pageName: 'homepage.ejs',
     uri: '/',
-    data: 'photographers'
+    data: 'homepage'
   }, {
     fileName: 'regulamin.html',
     pageName: 'rules.ejs',
