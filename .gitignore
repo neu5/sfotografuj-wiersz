@@ -20,4 +20,5 @@ _PSD/
 
 # generated files
 public/css/
+public/js/
 dist/

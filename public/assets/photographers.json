@@ -1,23 +1,33 @@
 [
   {
     "name": "Arnau Vidal Cascalló",
-    "img": "/assets/photographer/arnau_vidal/arnau_vidal.jpg",
+    "path":"/assets/photographer/arnau_vidal/",
+    "img": "arnau_vidal.jpg",
+    "contest-photo": "contest-photo.jpg",
     "description": "Rocznik 1980. Urodzony w Hiszpanii. Studiował antropologię, ale nie wiedział, do czego może ona mu się przydać, więc wyjechał do Wrocławia na wolontariat i właśnie tu zaczął robić zdjęcia. Potem wrócił do Barcelony, gdzie ukończył IEFC (Kataloński Instytut Studiów Fotograficznych). Po latach ponownie zakotwiczył we Wrocławiu, a ponieważ był fotografem został zatrudniony w Ośrodku Postaw Twórczych, gdzie do tej pory z powodzeniem prowadzi pracownię photoshopa. <br>Żyje szczęśliwy pod Mostem Milenijnym wraz z 14 kotami i psem."
   }, {
     "name": "Izabela Urbaniak",
-    "img": "/assets/photographer/izabela_urbaniak/izabela_urbaniak.jpg",
+    "path": "/assets/photographer/izabela_urbaniak/",
+    "img": "izabela_urbaniak.jpg",
+    "contest-photo": "contest-photo.jpg",
     "description": "Rocznik 1973. Magister psychologii zarządzania. Ukończyła również z wyróżnieniem Warszawską Szkołę Filmową. Obecnie jest wiceprezesem ZPAF-u okręgu łódzkiego. Od lat aktywna na polu fotografii artystycznej i komercyjnej. Kładzie nacisk na wykreowanie szczególnej atmosfery zdjęcia. Wielokrotnie wyróżniana w prestiżowych konkursach m.in. Grand Prix National Geographic Traveler 2008, Photo of the Year w „Photo  Art. Magazine”,  zdobywczyni I nagrody w polskiej edycji konkursu EISA PHOTO CONTEST 2009, wyróżnienie w Sony World Photograpy Awards 2011, I nagroda w konkursie Ministerstwa Spraw Zagranicznych „Lens of Development”w kategorii fotoreportaż (11.2011r.), I nagroda i złoty medal FIAP w biennale „Dziecko” 2012. Oprócz fotografii artystycznej, zajmuje się również fotografią dokumentalną. Współpracuje z takimi markami jak: DILMAH czy BOLS. Mieszka i pracuje w Łodzi."
   }, {
     "name": "Łukasz Kapa",
-    "img": "/assets/photographer/lukasz_kapa/lukasz_kapa.jpg",
+    "path": "/assets/photographer/lukasz_kapa/",
+    "img": "lukasz_kapa.jpg",
+    "contest-photo": "contest-photo.jpg",
     "description": "Rocznik 1989. Z wykształcenia archeolog, z zamiłowania grafik i fotograf. W swojej twórczości koncentruje się wokół tworzenia onirycznych, sensualnych portretów. Niedopowiedzenia, które tworzy nadają jego pracom szczególny charakter oraz otwartą formę interpretacji. Wciąż szuka nowych form wyrazu w fotografii  ̶  zaczynając od fotografowania telefonem, na błonach rentgenowskich kończąc. Stara się aby formę dobierać zależnie do fotografowanej osoby oraz wizji. Każdy człowiek jest dla niego inny, nie popada w schematy i cały czas poszerza swoje horyzonty w kwestii zrozumienia modeli oraz wyrazie własnego \"ja\"."
   }, {
     "name": "Marek Lapis",
-    "img": "/assets/photographer/marek_lapis/marek_lapis.jpg",
+    "path": "/assets/photographer/marek_lapis/",
+    "img": "marek_lapis.jpg",
+    "contest-photo": "contest-photo.jpg",
     "description": "Rocznik 1968. Zajmuje się fotografią dokumentalną, reportażem i szeroko pojętą fotografią społeczną. Fotografuje środowiska niszowe, wyalienowane z ogólnie pojmowanego społeczeństwa. W fotografii interesuję go przede wszystkim człowiek i jego emocje. Laureat prestiżowych konkursów fotograficznych m.in.: Black & White Spider Awards 2015 Los Angeles, International Photography Awards 2013 Los Angeles, PX3 Paris 2015. Grand Press Photo 2008 i 2015,  Leica Street Photo, BZ WBK PRESS FOTO, National Geographic Polska, Projekt Przetwórnia. Uczestnik prestiżowych warsztatówm.in.: Magnum Photos oraz Ryszard Horowitz Workshop. Publikuje w większości polskich tygodników opinii („Wprost”, „Polityka”, „Newsweek”, „Przekrój”) oraz w mediach zagranicznych m.in.: „Time”, „Focus”, „The Sunday” „Telegraph”, Reuters. Wykładowca fotografii w Wyższej Szkole Nauk Humanistycznych i Dziennikarstwa oraz w Wielkopolskiej Szkole Fotografii. Wykładowca międzynarodowych warsztatów fotograficznych dla osób upośledzonych intelektualnie w roku 2013 i 2015 oraz pomysłodawca i twórca autorskiego programu warsztatów dla osób niesłyszących, który obecnie realizuje w Towarzystwie Osób Niesłyszących TON w Poznaniu. Do 1996 roku etatowy fotoreporter tygodnika WPROST, później praca we własnej Agencji Fotograficznej ARTMEDIA. Mieszka w Koziegłowach koło Poznania. Członek Związku Polskich Artystów Fotografików."
   }, {
     "name": "Marlena Jabłońska",
-    "img": "/assets/photographer/marlena_jablonska/marlena_jablonska.jpg",
+    "path": "/assets/photographer/marlena_jablonska/",
+    "img": "marlena_jablonska.jpg",
+    "contest-photo": "contest-photo.jpg",
     "description": "Urodzona w 1990, zamieszkała w Łodzi. Obecnie studentka fotografii na Państwowej Wyższej Szkole Filmowej, Telewizyjnej i Teatralnej w Łodzi, jak również Instytucie Twórczej Fotografii w Opawie. W obrębie jej głównych zainteresowań znajduje się fotografia dokumentalna, jak również kreacja, zastosowana w celu wyeksponowania poruszeń i zdarzeń istniejących w realnym świecie."
   }
 ]
