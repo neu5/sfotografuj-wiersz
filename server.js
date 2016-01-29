@@ -7,6 +7,13 @@ var path = require('path');
 
 var pages = require('./pages');
 
+// get app data
+var data = {
+  'homepage': require('./public/assets/homepage')
+};
+
+var timestamp = new Date().getTime();
+
 var app = express();
 
 var distPath = 'dist';
@@ -20,7 +27,7 @@ app.use('/', express.static('public'));
 pages.forEach(page => {
   app.get(page.uri, (req, res) => {
     res.render('layout', {
-      content: getPageContent(path.join('pages', page.pageName))
+      content: getPageContent(path.join('pages', page.pageName), data[page.data])
     });
   });
 });
@@ -31,7 +38,7 @@ app.get('/build', (req, res) => {
     var stream = fs.createWriteStream(fileName);
 
     stream.once('open', fd => {
-      var html = buildHtml(page.pageName);
+      var html = buildHtml(page.pageName, data[page.data]);
       stream.end(html);
     });
   });
@@ -42,12 +49,12 @@ app.get('/build', (req, res) => {
 app.listen(8080);
 console.log('server is running on localhost:8080');
 
-function getPageContent(fileName) {
-  return ejs.render(fs.readFileSync(path.join('views', fileName), 'utf-8'));
+function getPageContent(fileName, data) {
+  return ejs.render(fs.readFileSync(path.join('views', fileName), 'utf-8'), {data: data, timestamp: timestamp});
 }
 
-function buildHtml(pageName) {
+function buildHtml(pageName, data) {
   return getPageContent('partials/head.ejs') +
-         getPageContent(path.join('pages', pageName)) +
+         getPageContent(path.join('pages', pageName), data) +
          getPageContent('partials/footer.ejs');
 }

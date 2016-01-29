@@ -4,7 +4,7 @@
       display: inline-block;
       margin-right: 17px;
 
-      &.last-in-the-row {
+      &:last-of-type {
         margin-right: 0px;
       }
 
@@ -15,7 +15,7 @@
         position: relative;
 
         .artist-info {
-          bottom: 30px;
+          bottom: 20px;
           left: 25px;
           line-height: 20px;
           position: absolute;
@@ -23,10 +23,7 @@
 
           &__name {
             color: $white;
-          }
-
-          &__title {
-            color: $yellow;
+            margin-right: 20px;
           }
         }
       }
