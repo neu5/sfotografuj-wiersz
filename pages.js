@@ -29,5 +29,9 @@ module.exports = [
     fileName: 'winners.html',
     pageName: 'winners.ejs',
     uri: '/laureaci'
+  }, {
+    fileName: 'contact.html',
+    pageName: 'contact.ejs',
+    uri: '/kontakt'
   }
 ];
