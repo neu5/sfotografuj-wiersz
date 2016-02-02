@@ -1,0 +1,45 @@
+<section class="jury">
+  <h1 class="header">
+    Artyści
+  </h1>
+  <h2 class="subheader">
+    Fotografowie
+  </h2>
+  <ul class="person-list">
+    <% for(var i = 0; i < data.photographers.length; i++) { %>
+       <li>
+         <div class="person-list__image-wrapper">
+           <img src="<%= data.photographers[i].path %><%= data.photographers[i].img %>">
+         </div>
+         <div class="person-list__description-wrapper">
+           <h2 class="person-list__author-name">
+             <%= data.photographers[i].name %>
+           </h2>
+           <p class="person-list__description">
+             <%= data.photographers[i].description %>
+           </p>
+         </div>
+       </li>
+    <% } %>
+  </ul>
+  <h2 class="subheader">
+    Poeci
+  </h2>
+  <ul class="person-list">
+    <% for(var i = 0; i < data.writers.length; i++) { %>
+       <li>
+         <div class="person-list__image-wrapper">
+           <img src="<%= data.writers[i].path %><%= data.writers[i].img %>">
+         </div>
+         <div class="person-list__description-wrapper">
+           <h2 class="person-list__author-name">
+             <%= data.writers[i].name %>
+           </h2>
+           <p class="person-list__description">
+             <%= data.writers[i].description %>
+           </p>
+         </div>
+       </li>
+    <% } %>
+  </ul>
+</section>

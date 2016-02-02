@@ -20,5 +20,10 @@ module.exports = [
     fileName: 'jury.html',
     pageName: 'jury.ejs',
     uri: '/jury'
+  }, {
+    fileName: 'artist.html',
+    pageName: 'artist.ejs',
+    uri: '/artysci',
+    data: 'homepage'
   }
 ];
