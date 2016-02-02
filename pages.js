@@ -25,5 +25,9 @@ module.exports = [
     pageName: 'artist.ejs',
     uri: '/artysci',
     data: 'homepage'
+  }, {
+    fileName: 'winners.html',
+    pageName: 'winners.ejs',
+    uri: '/laureaci'
   }
 ];
