@@ -106,6 +106,7 @@ ul {
 
 .person-list {
   margin-top: 35px;
+  line-height: 1.4em;
   overflow: hidden;
 
   li {
@@ -115,11 +116,14 @@ ul {
 
   &__image-wrapper {
     float: left;
+    height: 281px;
+    width: 213px;
   }
 
   &__description-wrapper {
     float: left;
     margin-left: 90px;
+    width: 800px;
   }
 
   &__author-name {
