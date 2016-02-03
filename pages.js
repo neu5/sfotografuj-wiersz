@@ -21,20 +21,20 @@ module.exports = [
     pageName: 'jury.ejs',
     uri: '/jury'
   }, {
-    fileName: 'artist.html',
+    fileName: 'artysci.html',
     pageName: 'artist.ejs',
     uri: '/artysci',
     data: 'homepage'
   }, {
-    fileName: 'winners.html',
+    fileName: 'laureaci.html',
     pageName: 'winners.ejs',
     uri: '/laureaci'
   }, {
-    fileName: 'contact.html',
+    fileName: 'kontakt.html',
     pageName: 'contact.ejs',
     uri: '/kontakt'
   }, {
-    fileName: 'organizators.html',
+    fileName: 'organizatorzy.html',
     pageName: 'organizators.ejs',
     uri: '/organizatorzy'
   }
