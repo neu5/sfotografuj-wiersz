@@ -33,5 +33,9 @@ module.exports = [
     fileName: 'contact.html',
     pageName: 'contact.ejs',
     uri: '/kontakt'
+  }, {
+    fileName: 'organizators.html',
+    pageName: 'organizators.ejs',
+    uri: '/organizatorzy'
   }
 ];
