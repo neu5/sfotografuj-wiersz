@@ -37,5 +37,9 @@ module.exports = [
     fileName: 'organizatorzy.html',
     pageName: 'organizators.ejs',
     uri: '/organizatorzy'
+  }, {
+    fileName: 'aktualnosci.html',
+    pageName: 'aktualnosci.ejs',
+    uri: '/aktualnosci'
   }
 ];
